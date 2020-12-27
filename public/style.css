@@ -1,0 +1,51 @@
+
+html, body {
+    background-color: black;
+    background-image: url("./stars.jpg");
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.scene {
+    width: 100vh;
+    height: 100vh;
+    perspective: 200px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    position: absolute;
+    top: 0px;
+    transform: rotateX(15deg);
+    height: 100%;
+    width: 25rem;
+}
+
+.text {
+    position: absolute;
+    line-height: 1.5;
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: yellow;
+
+    animation: scroll-text 35s linear infinite; 
+}
+
+@keyframes scroll-text {
+    0% {
+        top: 90%;
+    }
+
+    30% {
+        top: 0px;
+    }
+
+    100% {
+        top: -190%;
+    }
+}
